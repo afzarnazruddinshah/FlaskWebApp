@@ -1,0 +1,21 @@
+
+
+{% extends "layout.html" %}
+
+{% with messages = get_flashed_messages(with_categories= true) %}
+    {% if messages %}
+     {% for category, message in messages %}
+            {{ message }}
+     {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% block body %}
+
+<h1> Index Page </h1>
+<p>Hello {{ name }}</p>
+<a href="blog"> Blog Posts </a>
+<a href="signup"> Sign Up</a>
+
+{% endblock body %}
+
